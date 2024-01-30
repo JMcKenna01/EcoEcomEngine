@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../EcoEcomEngine"
+		},
+		{
+			"path": "../config"
+		},
+		{
+			"path": "../db"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../routes"
+		},
+		{
+			"path": "../seeds"
+		}
+	],
+	"settings": {}
+}
