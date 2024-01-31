@@ -33,9 +33,9 @@ To run the E-Commerce Back End, follow these steps:
 
 ## Walkthrough Video
 
-[Click here to view the walkthrough video.](#)
 
-<!-- Replace # with the link to your walkthrough video -->
+
+
 
 ## Contributing
 
