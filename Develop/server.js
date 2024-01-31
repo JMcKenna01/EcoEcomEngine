@@ -1,6 +1,10 @@
+require('dotenv').config();
+
+// Import Sequelize connection
+const sequelize = require('./config/connection'); // Adjust the path as needed
+
 const express = require('express');
 const routes = require('./routes');
-// import sequelize connection
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -10,7 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-});
+// Sync Sequelize models to the database, then start the server
+sequelize.sync({ force: false })
+  .then(() => {
+    console.log('Database synced');
+    app.listen(PORT, () => {
+      console.log(`App listening on port ${PORT}!`);
+    });
+  })
+  .catch(err => {
+    console.error('Sequelize sync failed:', err);
+  });
