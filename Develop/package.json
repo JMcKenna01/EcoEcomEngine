@@ -4,7 +4,8 @@
   "description": "A versatile and scalable backend system for e-commerce platforms, built with Node.js, Express, and Sequelize, integrating robust database management with MySQL to streamline online retail operations.",
   "main": "server.js",
   "scripts": {
-    "test": "\"scripts\": {"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
